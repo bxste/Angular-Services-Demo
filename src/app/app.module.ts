@@ -9,7 +9,7 @@ import { MyserviceService } from './myservice.service';
 import { NewCmpComponent } from './new-cmp/new-cmp.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpclientComponent } from './httpclient/httpclient.component';
-import { HttpclientService } from './httpclient/httpclient.service';
+import { HttpclientService } from './httpclient.service';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpClientModule],
