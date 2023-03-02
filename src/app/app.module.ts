@@ -7,11 +7,19 @@ import { HelloComponent } from './hello.component';
 
 import { MyserviceService } from './myservice.service';
 import { NewCmpComponent } from './new-cmp/new-cmp.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpclientComponent } from './httpclient/httpclient.component';
+import { HttpclientService } from './httpclient/httpclient.service';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, HelloComponent, NewCmpComponent],
-  providers: [MyserviceService],
+  imports: [BrowserModule, FormsModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    NewCmpComponent,
+    HttpclientComponent,
+  ],
+  providers: [MyserviceService, HttpclientService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
