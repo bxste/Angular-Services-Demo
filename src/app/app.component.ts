@@ -9,8 +9,12 @@ import { MyserviceService } from './myservice.service';
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
   todaydate;
+  componentproperty;
   constructor(private myservice: MyserviceService) {}
   ngOnInit() {
     this.todaydate = this.myservice.showTodayDate();
+    console.log(this.myservice.serviceproperty);
+    this.myservice.serviceproperty = 'component created';
+    this.componentproperty = this.myservice.serviceproperty;
   }
 }
